@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
-import 'package:product_platform_ui/component/detail_chat.dart';
-import 'package:product_platform_ui/component/detail_confirm_dialog.dart';
+import 'package:product_platform_ui/component/product_detail/detail_chat.dart';
+import 'package:product_platform_ui/component/product_detail/detail_confirm_dialog.dart';
 import 'package:product_platform_ui/screen/detail_main.dart';
 
 class ProductChatScreen extends StatefulWidget {

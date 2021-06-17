@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:product_platform_ui/component/detail_bar.dart';
-import 'package:product_platform_ui/component/detail_item.dart';
-import 'package:product_platform_ui/component/detail_info.dart';
-import 'package:product_platform_ui/component/detail_price.dart';
-import 'package:product_platform_ui/component/detail_bottom_bar.dart';
-import 'package:product_platform_ui/component/detail_scroll_bar.dart';
+import 'package:product_platform_ui/component/product_detail/detail_bar.dart';
+import 'package:product_platform_ui/component/product_detail/detail_item.dart';
+import 'package:product_platform_ui/component/product_detail/detail_info.dart';
+import 'package:product_platform_ui/component/product_detail/detail_price.dart';
+import 'package:product_platform_ui/component/product_detail/detail_bottom_bar.dart';
+import 'package:product_platform_ui/component/product_detail/detail_scroll_bar.dart';
 
 class ProductDetailPage extends StatefulWidget {
   static String tag = 'ProductdetaiPage';
