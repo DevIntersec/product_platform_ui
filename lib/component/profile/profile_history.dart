@@ -10,43 +10,44 @@ class ProfileHistory extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
-              height: 22,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(
+            height: 22,
+          ),
+          Text(
+            'SAVE',
+            textAlign: TextAlign.left,
+            //overflow: TextOverflow.ellipsis,
+            style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'SFProText',
+                color: Colors.black),
+          ),
+          Row(children: [
+            SizedBox(height: 30),
+            Text(
+              save[index]['amount'].toString(),
+              style: TextStyle(fontSize: 50, fontWeight: FontWeight.w500),
             ),
             Text(
-              'SAVE',
-              textAlign: TextAlign.left,
-              //overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'SFProText',
-                  color: Colors.black),
+              "THB",
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
             ),
-            Row(children: [
-              SizedBox(height: 30),
-              Text(
-                save[index]['amount'].toString(),
-                style: TextStyle(fontSize: 50, fontWeight: FontWeight.w500),
-              ),
-              Text(
-                "THB",
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
-              ),
-              SizedBox(width: 30),
-              Text(
-                save[index]['time'].toString(),
-                style: TextStyle(fontSize: 10, fontWeight: FontWeight.w500),
-              ),
-              Text(
-                "Min",
-                style: TextStyle(fontSize: 10, fontWeight: FontWeight.w500),
-              ),
-            ]),
-            Row(children: [
+            SizedBox(width: 30),
+            Text(
+              save[index]['time'].toString(),
+              style: TextStyle(fontSize: 10, fontWeight: FontWeight.w500),
+            ),
+            Text(
+              "Min",
+              style: TextStyle(fontSize: 10, fontWeight: FontWeight.w500),
+            ),
+          ]),
+          Row(
+            children: [
               SizedBox(
                 height: 30,
                 width: 30,
@@ -64,8 +65,10 @@ class ProfileHistory extends StatelessWidget {
                 save[index]['dateTime'].toString(),
                 style: TextStyle(fontSize: 10, fontWeight: FontWeight.w500),
               ),
-            ]),
-          ]),
+            ],
+          ),
+        ],
+      ),
       margin: EdgeInsets.only(
         left: 100.0,
         right: 20.0,
@@ -76,11 +79,11 @@ class ProfileHistory extends StatelessWidget {
         shape: BoxShape.rectangle,
         borderRadius: BorderRadius.circular(12),
         image: DecorationImage(
-            alignment: Alignment.center,
-            image: AssetImage(images[index]),
-            fit: BoxFit.cover),
+          alignment: Alignment.center,
+          image: AssetImage(images[index]),
+          fit: BoxFit.cover,
+        ),
       ),
     );
-    ;
   }
 }

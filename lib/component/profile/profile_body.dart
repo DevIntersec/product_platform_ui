@@ -191,9 +191,19 @@ class ProfileBody extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 7),
         ),
         SizedBox(height: 3),
-        IndexedStack(
-          children: [this.history, this.activity],
-        ),
+        // IndexedStack(
+        //   children: [this.activity],
+        // ),
+        Expanded(
+          child: Column(
+            children: [
+              this.history,
+              SizedBox(height: 30),
+              this.activity,
+              SizedBox(height: 30),
+            ],
+          ),
+        )
       ],
     );
     ;
