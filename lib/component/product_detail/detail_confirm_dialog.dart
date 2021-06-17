@@ -90,10 +90,11 @@ class DetailConfirm extends StatelessWidget {
               Text(
                 "Sahachan T.'s ask for join in \n หาคนซื้อเสื้อผ้า...",
                 style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.black,
-                    decoration: TextDecoration.none,
-                    fontFamily: 'FC Minimal Regular'),
+                  fontSize: 12,
+                  color: Colors.black,
+                  decoration: TextDecoration.none,
+                  fontFamily: 'FC-Minimal-Regular',
+                ),
               ),
             ],
           ),
