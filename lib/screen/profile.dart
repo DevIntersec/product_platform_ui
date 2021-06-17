@@ -4,6 +4,7 @@ import 'package:product_platform_ui/component/profile/profile_activity.dart';
 import 'package:product_platform_ui/component/profile/profile_appbar.dart';
 import 'package:product_platform_ui/component/profile/profile_body.dart';
 import 'package:product_platform_ui/component/profile/profile_history.dart';
+import 'package:product_platform_ui/util/activity_history.dart';
 import 'package:product_platform_ui/util/save_history.dart';
 
 class Profile1 extends StatefulWidget {
@@ -39,7 +40,7 @@ class _Profile1State extends State<Profile1> {
       spacing: 40,
       runSpacing: 20,
       children: List.generate(
-        save.length,
+        activity.length,
         (index) {
           return ProfileActivity(size: size, index: index);
         },
