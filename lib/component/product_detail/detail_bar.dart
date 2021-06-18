@@ -26,7 +26,7 @@ class DetailBar extends StatelessWidget implements PreferredSizeWidget {
         child: Row(
           children: [
             SizedBox(
-              width: 16,
+              width: 48,
             ),
             _textDetail('Following'),
             _textDetail('Location')
@@ -35,10 +35,10 @@ class DetailBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       centerTitle: true,
       actions: [
-        GestureDetector(
-          onTap: () => Navigator.of(context).pushNamed(ProductChatScreen.tag),
-          child: _imageBox('assets/icons/Send_0.png'),
-        ),
+        // GestureDetector(
+        //   onTap: () => Navigator.of(context).pushNamed(ProductChatScreen.tag),
+        //   child: _imageBox('assets/icons/Send_0.png'),
+        // ),
         GestureDetector(
           onTap: () => {},
           child: _imageBox('assets/icons/Notification_0.png'),

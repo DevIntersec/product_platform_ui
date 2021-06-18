@@ -53,48 +53,107 @@ class DetailInfo extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Container(
-        height: 310,
-        width: 380,
-        margin: EdgeInsets.only(top: 10),
-        child: Card(
-          child: Padding(
-            padding: EdgeInsets.all(25),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    _usernameText('Sahachan T.'),
-                    _descriptionText("หาคนซื้อหารเสื้อผ้า 9 ชุด"),
-                    _price("100 ", "THB/People")
-                  ],
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    _timeText("    3 Min\n27.01.20"),
-                    _amongText("2", 40.0),
-                  ],
-                )
-              ],
-            ),
-          ),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(30)),
+      height: 310,
+      width: 380,
+      margin: EdgeInsets.only(top: 10),
+      child: Card(
+        child: Padding(
+          padding: EdgeInsets.all(25),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      _usernameText('Sahachan T.'),
+                      _descriptionText("หาคนซื้อหารเสื้อผ้า 9 ชุด"),
+                      _price("100 ", "THB/People")
+                    ],
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      _timeText("    3 Min\n27.01.20"),
+                      _amongText("2", 40.0),
+                    ],
+                  )
+                ],
+              ),
+              SizedBox(height: 30),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      _usernameText("Let's get lunch. How about \npizza?"),
+                    ],
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      _timeText("Panomete O."),
+                    ],
+                  )
+                ],
+              ),
+              SizedBox(height: 40),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    width: 40,
+                    child: IconButton(
+                      tooltip: 'Send message',
+                      icon: Image.asset(
+                        'assets/icons/Send_0.png',
+                      ),
+                      onPressed: () {},
+                    ),
+                  ),
+                  SizedBox(
+                    width: 60,
+                    height: 50,
+                    child: IconButton(
+                      tooltip: 'Send request',
+                      icon: Image.asset('assets/icons/up_solid_arrow.png'),
+                      onPressed: () => {},
+                    ),
+                  ),
+                  SizedBox(
+                    width: 40,
+                    child: IconButton(
+                      tooltip: 'Call',
+                      icon: Image.asset('assets/icons/tel_1.png'),
+                      onPressed: () => {},
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
-        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
-              spreadRadius: 5,
-              blurRadius: 10,
-              offset: Offset(0, 4), // changes position of shadow
-            ),
-          ],
-        ));
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(30)),
+        ),
+      ),
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 5,
+            blurRadius: 10,
+            offset: Offset(0, 4), // changes position of shadow
+          ),
+        ],
+      ),
+    );
   }
 }

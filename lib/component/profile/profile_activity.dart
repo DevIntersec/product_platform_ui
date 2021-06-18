@@ -10,7 +10,7 @@ class ProfileActivity extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(
-        left: 45.0,
+        left: 20.0,
         right: 20.0,
       ),
       child: Column(

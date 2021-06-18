@@ -201,11 +201,14 @@ class ProfileBody extends StatelessWidget {
               SizedBox(height: 30),
               this.activity,
               SizedBox(height: 30),
+              this.history,
+              SizedBox(height: 30),
+              this.activity,
+              SizedBox(height: 30),
             ],
           ),
         )
       ],
     );
-    ;
   }
 }

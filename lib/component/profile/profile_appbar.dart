@@ -40,6 +40,7 @@ class ProfileAppbar extends StatelessWidget implements PreferredSizeWidget {
           ),
         ),
       ],
+      elevation: 0,
     );
   }
 }
