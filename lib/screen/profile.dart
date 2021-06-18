@@ -4,6 +4,7 @@ import 'package:product_platform_ui/component/profile/profile_activity.dart';
 import 'package:product_platform_ui/component/profile/profile_appbar.dart';
 import 'package:product_platform_ui/component/profile/profile_body.dart';
 import 'package:product_platform_ui/component/profile/profile_history.dart';
+import 'package:product_platform_ui/component/profile/profile_scollbar.dart';
 import 'package:product_platform_ui/util/activity_history.dart';
 import 'package:product_platform_ui/util/save_history.dart';
 
@@ -54,10 +55,12 @@ class _Profile1State extends State<Profile1> {
 
     return Scaffold(
       appBar: ProfileAppbar(),
-      body: ProfileBody(
-        size: size,
-        history: getHistory(size),
-        activity: getActivity(size),
+      body: ProfileScrollBar(
+        customWidget: ProfileBody(
+          size: size,
+          history: getHistory(size),
+          activity: getActivity(size),
+        ),
       ),
       bottomNavigationBar: DetailBottomBar(),
     );

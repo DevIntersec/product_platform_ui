@@ -46,6 +46,17 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
           ],
         ),
         DetailInfo(),
+        // Container(
+        //   child: GridView.count(
+        //     crossAxisCount: 2,
+        //     children: List.generate(
+        //       20,
+        //       (index) {
+        //         return Text('something');
+        //       },
+        //     ),
+        //   ),
+        // ),
       ],
     ),
   );
