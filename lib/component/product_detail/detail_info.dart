@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:product_platform_ui/screen/detail_chat_screen.dart';
 
 class DetailInfo extends StatelessWidget {
   Widget _usernameText(String name) {
@@ -115,7 +116,8 @@ class DetailInfo extends StatelessWidget {
                       icon: Image.asset(
                         'assets/icons/Send_0.png',
                       ),
-                      onPressed: () {},
+                      onPressed: () => Navigator.of(context)
+                          .pushNamed(ProductChatScreen.tag),
                     ),
                   ),
                   SizedBox(
