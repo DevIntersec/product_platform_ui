@@ -1,5 +1,8 @@
 # product_platform_ui
 
-My tasks is to merging profile part and product part and modified some content to achive the design
+1. clone this repository
+2. change branch to your branch ``` git checkout <your name>```
+3. when you finish the work ``` add . > commit -m "resonable msg" > push -u origin <your name> ```
 
-currently on flutter 2.0 not 2.2
+for reviewer 
+- if there are good verify merge code to dev branch
