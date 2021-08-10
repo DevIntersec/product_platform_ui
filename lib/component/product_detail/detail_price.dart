@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:product_platform_ui/screen/detail_chat_screen.dart';
 import 'package:show_more_text_popup/show_more_text_popup.dart';
 import 'package:prompt_dialog/prompt_dialog.dart';
@@ -34,7 +35,29 @@ class _DetailPriceState extends State<DetailPrice> {
       title: Text('Join us'),
       hintText: 'among of money',
       textCancel: GestureDetector(
-        onTap: () => Navigator.of(context).pushNamed(ProductChatScreen.tag),
+        onTap: () => {
+          SmartDialog.show(
+            alignmentTemp: Alignment.topCenter,
+            clickBgDismissTemp: true,
+            widget: Container(
+              constraints: BoxConstraints(
+                maxHeight: 800,
+                maxWidth: 600,
+              ),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black12,
+                    blurRadius: 20,
+                    spreadRadius: 100,
+                  )
+                ],
+              ),
+              child: ProductChatScreen(),
+            ),
+          ),
+        },
         child: SizedBox(
           height: 30,
           child: Image.asset('assets/icons/Send_0.png'),

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:product_platform_ui/component/product_detail/detail_chat.dart';
 import 'package:product_platform_ui/component/product_detail/detail_confirm_dialog.dart';
-import 'package:product_platform_ui/screen/detail_main.dart';
 
 class ProductChatScreen extends StatefulWidget {
-  static String tag = 'ProductChatScreen';
   @override
   ProductChatScreenState createState() => ProductChatScreenState();
 }
@@ -21,15 +20,7 @@ class ProductChatScreenState extends State<ProductChatScreen> {
     return Scaffold(
       appBar: AppBar(
         leading: GestureDetector(
-          onTap: () => {
-            Navigator.pushAndRemoveUntil(
-              context,
-              MaterialPageRoute(
-                builder: (BuildContext context) => ProductDetailPage(),
-              ),
-              (route) => false,
-            ),
-          },
+          onTap: () => {SmartDialog.dismiss()},
           child: Image.asset('assets/icons/Arrow - Left 2_1.png'),
         ),
         title: DetailChatTitle('Sahachan T.'),
@@ -70,9 +61,10 @@ class ProductChatScreenState extends State<ProductChatScreen> {
                   barrierColor: Colors.white10,
                   builder: (BuildContext context) {
                     return SingleChildScrollView(
-                        child: ListBody(
-                      children: [DetailConfirm()],
-                    ));
+                      child: ListBody(
+                        children: [DetailConfirm()],
+                      ),
+                    );
                   },
                   animationType: DialogTransitionType.sizeFade,
                   curve: Curves.linear,

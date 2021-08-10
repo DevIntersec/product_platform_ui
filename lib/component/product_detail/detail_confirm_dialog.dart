@@ -56,13 +56,6 @@ class DetailConfirm extends StatelessWidget {
     return GestureDetector(
       onTap: () => {
         _markGiven(path, msgOnChat),
-        Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(
-            builder: (BuildContext context) => ProductChatScreen(),
-          ),
-          (e) => false,
-        ),
       },
       child: Container(
         child: _showMark(

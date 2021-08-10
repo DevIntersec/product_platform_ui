@@ -4,7 +4,6 @@ import 'package:product_platform_ui/component/product_detail/detail_item.dart';
 import 'package:product_platform_ui/component/product_detail/detail_info.dart';
 import 'package:product_platform_ui/component/product_detail/detail_price.dart';
 import 'package:product_platform_ui/component/product_detail/detail_bottom_bar.dart';
-import 'package:product_platform_ui/component/product_detail/detail_scroll_bar.dart';
 
 class ProductDetailPage extends StatefulWidget {
   static String tag = 'ProductdetaiPage';
@@ -66,7 +65,9 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
     return Scaffold(
       appBar: DetailBar(),
       backgroundColor: Colors.white,
-      body: DetailScrollBar(product_platform_ui),
+      body: ListView(
+        children: [product_platform_ui],
+      ),
       bottomNavigationBar: DetailBottomBar(),
     );
   }

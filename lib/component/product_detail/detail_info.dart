@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:product_platform_ui/screen/detail_chat_screen.dart';
 
 class DetailInfo extends StatelessWidget {
@@ -116,8 +117,29 @@ class DetailInfo extends StatelessWidget {
                       icon: Image.asset(
                         'assets/icons/Send_0.png',
                       ),
-                      onPressed: () => Navigator.of(context)
-                          .pushNamed(ProductChatScreen.tag),
+                      onPressed: () => {
+                        SmartDialog.show(
+                          alignmentTemp: Alignment.topCenter,
+                          clickBgDismissTemp: true,
+                          widget: Container(
+                            constraints: BoxConstraints(
+                              maxHeight: 800,
+                              maxWidth: 600,
+                            ),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 20,
+                                  spreadRadius: 100,
+                                )
+                              ],
+                            ),
+                            child: ProductChatScreen(),
+                          ),
+                        ),
+                      },
                     ),
                   ),
                   SizedBox(
