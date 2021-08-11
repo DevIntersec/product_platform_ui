@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:product_platform_ui/component/product_detail/detail_chat.dart';
-import 'package:product_platform_ui/component/product_detail/detail_confirm_dialog.dart';
+import 'package:product_platform_ui/component/product_detail/detail_confirm_bottom_bar.dart';
 
 class ProductChatScreen extends StatefulWidget {
   @override
@@ -37,51 +36,7 @@ class ProductChatScreenState extends State<ProductChatScreen> {
           children: [for (var i in li) i],
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
-        color: Colors.white,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            IconButton(
-              tooltip: 'Send message',
-              icon: Image.asset('assets/icons/Send_1.png'),
-              onPressed: () {},
-            ),
-            SizedBox(
-              width: 20,
-            ),
-            IconButton(
-              tooltip: 'Send request',
-              icon: Image.asset('assets/icons/up-arrow-1.png'),
-              onPressed: () => {
-                showAnimatedDialog(
-                  context: context,
-                  barrierDismissible: true,
-                  barrierColor: Colors.white10,
-                  builder: (BuildContext context) {
-                    return SingleChildScrollView(
-                      child: ListBody(
-                        children: [DetailConfirm()],
-                      ),
-                    );
-                  },
-                  animationType: DialogTransitionType.sizeFade,
-                  curve: Curves.linear,
-                ),
-              },
-            ),
-            SizedBox(
-              width: 20,
-            ),
-            IconButton(
-              tooltip: 'Call',
-              icon: Image.asset('assets/icons/tel_3.png'),
-              onPressed: () {},
-            ),
-          ],
-        ),
-      ),
+      bottomNavigationBar: DetailConfirmBottomBar(),
     );
   }
 }

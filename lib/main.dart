@@ -20,7 +20,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'SFProText-Regular',
       ),
-      home: Profile1(),
+      home: Builder(
+        builder: (context) => Profile1(),
+      ),
       routes: routes,
       builder: (BuildContext context, Widget child) {
         return FlutterSmartDialog(child: child);
