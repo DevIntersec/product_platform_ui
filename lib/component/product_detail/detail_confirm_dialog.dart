@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:product_platform_ui/screen/detail_chat_screen.dart';
 
 class DetailConfirm extends StatelessWidget {
@@ -39,9 +40,10 @@ class DetailConfirm extends StatelessWidget {
         Text(
           msg,
           style: TextStyle(
-              fontSize: 12,
-              color: Colors.black,
-              decoration: TextDecoration.none),
+            fontSize: 12,
+            color: Colors.black,
+            decoration: TextDecoration.none,
+          ),
         ),
       ],
     );
@@ -56,13 +58,7 @@ class DetailConfirm extends StatelessWidget {
     return GestureDetector(
       onTap: () => {
         _markGiven(path, msgOnChat),
-        Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(
-            builder: (BuildContext context) => ProductChatScreen(),
-          ),
-          (e) => false,
-        ),
+        SmartDialog.dismiss(),
       },
       child: Container(
         child: _showMark(

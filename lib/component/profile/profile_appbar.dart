@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:product_platform_ui/screen/detail_chat_screen.dart';
 
 class ProfileAppbar extends StatelessWidget implements PreferredSizeWidget {
@@ -15,7 +16,7 @@ class ProfileAppbar extends StatelessWidget implements PreferredSizeWidget {
         style: TextStyle(fontFamily: 'SFProText', color: Colors.black),
       ),
       leading: GestureDetector(
-        onTap: () => {}, //gonna edit this again
+        onTap: () => {SmartDialog.dismiss()}, //gonna edit this again
         child: Image(
           image: AssetImage("assets/icons/Arrow - Left 2_1.png"),
         ),
@@ -25,7 +26,29 @@ class ProfileAppbar extends StatelessWidget implements PreferredSizeWidget {
         Padding(
           padding: EdgeInsets.only(right: 15.0),
           child: GestureDetector(
-            onTap: () => Navigator.of(context).pushNamed(ProductChatScreen.tag),
+            onTap: () => {
+              SmartDialog.show(
+                alignmentTemp: Alignment.topCenter,
+                clickBgDismissTemp: true,
+                widget: Container(
+                  constraints: BoxConstraints(
+                    maxHeight: 800,
+                    maxWidth: 600,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black12,
+                        blurRadius: 20,
+                        spreadRadius: 100,
+                      )
+                    ],
+                  ),
+                  child: ProductChatScreen(),
+                ),
+              ),
+            },
             child: Image(
               image: AssetImage("assets/icons/Send_1.png"),
             ),
